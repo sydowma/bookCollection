@@ -11,6 +11,6 @@
 
 @interface BookListService : NSObject
 
-+ (NSArray<BookEntity *> *)getAllBookEntities;
++ (void)getBookEntityListWithOffset:(long long)offset size:(NSInteger)size completion:(void (^)(NSArray<BookEntity *> *))completionHandler;
 
 @end

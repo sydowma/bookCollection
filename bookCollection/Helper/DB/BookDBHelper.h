@@ -16,4 +16,6 @@
 
 + (void)buildDataBase;
 
++ (void)resetDataBase;
+
 @end

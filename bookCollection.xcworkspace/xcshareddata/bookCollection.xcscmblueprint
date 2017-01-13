@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "90392B63BC5D3960BBC0763468AB1A84FE5FA345",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "90392B63BC5D3960BBC0763468AB1A84FE5FA345" : 9223372036854775807,
+    "13B3C409869092EEAE05C7E85FB75F79A2068DC3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3674A90F-8377-4D9B-A8F2-1CE190AAF900",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "90392B63BC5D3960BBC0763468AB1A84FE5FA345" : "bookCollection\/",
+    "13B3C409869092EEAE05C7E85FB75F79A2068DC3" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "bookCollection",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "bookCollection.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/magaofei\/NetEaseStudy_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "13B3C409869092EEAE05C7E85FB75F79A2068DC3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/magaofei\/bookCollection.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "90392B63BC5D3960BBC0763468AB1A84FE5FA345"
+    }
+  ]
+}

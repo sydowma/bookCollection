@@ -32,6 +32,7 @@
     
     [self initWithTabbar];
     
+//    [self registerPush];
     
     
     return YES;
@@ -137,6 +138,47 @@
     }
     
     return YES;
+}
+
+
+#pragma mark - push
+
+- (void)registerPush {
+    // iOS8 以后
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerForRemoteNotifications)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge categories:nil]];
+    } else {
+        // iOS7 及之前
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge];
+    }
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // 去掉先后尖括号和中间的空格
+    NSString *token = [[[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]] stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"DeviceToken string, %@", token);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+}
+
+
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+//    NSLog(@"%s", __func__);
+//}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"%s", __func__);
+    
+    UIPasteboard *pastedBoard = [UIPasteboard generalPasteboard];
+    NSString * s = [userInfo objectForKey:@"content"];
+    [pastedBoard setString:s];
+    
 }
 
 

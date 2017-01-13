@@ -95,5 +95,11 @@
     
 }
 
+// 抹掉数据并重新创建数据库
++ (void)resetDataBase {
+    [[NSFileManager defaultManager] removeItemAtPath:[[self class] dbFolder] error:nil];
+    [[self class] buildDataBase];
+}
+
 
 @end

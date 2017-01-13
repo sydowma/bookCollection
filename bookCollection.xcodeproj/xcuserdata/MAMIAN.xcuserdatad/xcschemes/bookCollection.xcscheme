@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "222C98731E1BA09A00A75879"
-               BuildableName = "bookCollection.app"
+               BuildableName = "&#x79c1;&#x5bb6;&#x4e66;&#x85cf;DEBUG.app"
                BlueprintName = "bookCollection"
                ReferencedContainer = "container:bookCollection.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "222C98731E1BA09A00A75879"
-            BuildableName = "bookCollection.app"
+            BuildableName = "&#x79c1;&#x5bb6;&#x4e66;&#x85cf;DEBUG.app"
             BlueprintName = "bookCollection"
             ReferencedContainer = "container:bookCollection.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      launchStyle = "0"
+      launchStyle = "1"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "222C98731E1BA09A00A75879"
-            BuildableName = "bookCollection.app"
+            BuildableName = "&#x79c1;&#x5bb6;&#x4e66;&#x85cf;DEBUG.app"
             BlueprintName = "bookCollection"
             ReferencedContainer = "container:bookCollection.xcodeproj">
          </BuildableReference>
@@ -87,7 +87,7 @@
    <ProfileAction
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      savedToolIdentifier = ""
+      savedToolIdentifier = "/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Resources/templates/Time Profiler.tracetemplate"
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "222C98731E1BA09A00A75879"
-            BuildableName = "bookCollection.app"
+            BuildableName = "&#x79c1;&#x5bb6;&#x4e66;&#x85cf;DEBUG.app"
             BlueprintName = "bookCollection"
             ReferencedContainer = "container:bookCollection.xcodeproj">
          </BuildableReference>

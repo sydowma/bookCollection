@@ -38,6 +38,8 @@
 		22245FB01E1F3F3F00A99929 /* BookBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FAF1E1F3F3F00A99929 /* BookBaseTableViewCell.m */; };
 		22245FB41E1F3FCA00A99929 /* BookListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FB31E1F3FCA00A99929 /* BookListTableViewCell.m */; };
 		22245FB71E1F435C00A99929 /* BookListTableViewCell+BookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FB61E1F435C00A99929 /* BookListTableViewCell+BookEntity.m */; };
+		22245FBB1E1F9F7000A99929 /* BookFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FBA1E1F9F7000A99929 /* BookFPSLabel.m */; };
+		22245FBE1E1F9FD500A99929 /* BookWeakDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FBD1E1F9FD500A99929 /* BookWeakDisplayLink.m */; };
 		222C98921E1BA09B00A75879 /* bookCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 222C98911E1BA09B00A75879 /* bookCollectionTests.m */; };
 		222C989D1E1BA09B00A75879 /* bookCollectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 222C989C1E1BA09B00A75879 /* bookCollectionUITests.m */; };
 		47C4EDE995034EBA9E26B0D0 /* libPods-bookCollectionUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F6E708232B8C2EB45F544 /* libPods-bookCollectionUITests.a */; };
@@ -123,13 +125,18 @@
 		22245FB31E1F3FCA00A99929 /* BookListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookListTableViewCell.m; path = BookListTableViewCell/BookListTableViewCell.m; sourceTree = "<group>"; };
 		22245FB51E1F435C00A99929 /* BookListTableViewCell+BookEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BookListTableViewCell+BookEntity.h"; path = "BookListTableViewCell/BookListTableViewCell+BookEntity.h"; sourceTree = "<group>"; };
 		22245FB61E1F435C00A99929 /* BookListTableViewCell+BookEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BookListTableViewCell+BookEntity.m"; path = "BookListTableViewCell/BookListTableViewCell+BookEntity.m"; sourceTree = "<group>"; };
-		222C98741E1BA09A00A75879 /* bookCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22245FB91E1F9F7000A99929 /* BookFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookFPSLabel.h; path = FPS/BookFPSLabel.h; sourceTree = "<group>"; };
+		22245FBA1E1F9F7000A99929 /* BookFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookFPSLabel.m; path = FPS/BookFPSLabel.m; sourceTree = "<group>"; };
+		22245FBC1E1F9FD500A99929 /* BookWeakDisplayLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookWeakDisplayLink.h; path = FPS/BookWeakDisplayLink.h; sourceTree = "<group>"; };
+		22245FBD1E1F9FD500A99929 /* BookWeakDisplayLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookWeakDisplayLink.m; path = FPS/BookWeakDisplayLink.m; sourceTree = "<group>"; };
+		222C98741E1BA09A00A75879 /* 私家书藏DEBUG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "私家书藏DEBUG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C988D1E1BA09B00A75879 /* bookCollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bookCollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C98911E1BA09B00A75879 /* bookCollectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bookCollectionTests.m; sourceTree = "<group>"; };
 		222C98931E1BA09B00A75879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222C98981E1BA09B00A75879 /* bookCollectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bookCollectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C989C1E1BA09B00A75879 /* bookCollectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bookCollectionUITests.m; sourceTree = "<group>"; };
 		222C989E1E1BA09B00A75879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22464D191E24AD9E00935CC0 /* 私家书藏DEBUG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "私家书藏DEBUG.entitlements"; sourceTree = "<group>"; };
 		3AC13556DA9A466041C8B934 /* Pods-bookCollectionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookCollectionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bookCollectionUITests/Pods-bookCollectionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E8FF85E78A1407ADD810E3D /* Pods-bookCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookCollection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bookCollection/Pods-bookCollection.debug.xcconfig"; sourceTree = "<group>"; };
 		923DB64D474AAEA4242E8FB2 /* Pods-bookCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookCollectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bookCollectionTests/Pods-bookCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +200,7 @@
 		22245F3B1E1F367D00A99929 /* bookCollection */ = {
 			isa = PBXGroup;
 			children = (
+				22464D191E24AD9E00935CC0 /* 私家书藏DEBUG.entitlements */,
 				22245F3C1E1F367D00A99929 /* AppDelegate.h */,
 				22245F3D1E1F367D00A99929 /* AppDelegate.m */,
 				22245F3E1E1F367D00A99929 /* Assets.xcassets */,
@@ -299,6 +307,7 @@
 		22245F5B1E1F367D00A99929 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				22245FB81E1F9E4600A99929 /* FPS */,
 				22245F5C1E1F367D00A99929 /* DB */,
 			);
 			path = Helper;
@@ -495,6 +504,17 @@
 			name = TableViewCell;
 			sourceTree = "<group>";
 		};
+		22245FB81E1F9E4600A99929 /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				22245FB91E1F9F7000A99929 /* BookFPSLabel.h */,
+				22245FBA1E1F9F7000A99929 /* BookFPSLabel.m */,
+				22245FBC1E1F9FD500A99929 /* BookWeakDisplayLink.h */,
+				22245FBD1E1F9FD500A99929 /* BookWeakDisplayLink.m */,
+			);
+			name = FPS;
+			sourceTree = "<group>";
+		};
 		222C986B1E1BA09A00A75879 = {
 			isa = PBXGroup;
 			children = (
@@ -510,7 +530,7 @@
 		222C98751E1BA09A00A75879 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				222C98741E1BA09A00A75879 /* bookCollection.app */,
+				222C98741E1BA09A00A75879 /* 私家书藏DEBUG.app */,
 				222C988D1E1BA09B00A75879 /* bookCollectionTests.xctest */,
 				222C98981E1BA09B00A75879 /* bookCollectionUITests.xctest */,
 			);
@@ -555,7 +575,7 @@
 			);
 			name = bookCollection;
 			productName = bookCollection;
-			productReference = 222C98741E1BA09A00A75879 /* bookCollection.app */;
+			productReference = 222C98741E1BA09A00A75879 /* 私家书藏DEBUG.app */;
 			productType = "com.apple.product-type.application";
 		};
 		222C988C1E1BA09B00A75879 /* bookCollectionTests */ = {
@@ -613,6 +633,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N5G28WF2Y2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					222C988C1E1BA09B00A75879 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -831,6 +859,7 @@
 				22245F981E1F367D00A99929 /* BookBaseViewController.m in Sources */,
 				22245FA41E1F367D00A99929 /* BookListTableViewController.m in Sources */,
 				22245FB41E1F3FCA00A99929 /* BookListTableViewCell.m in Sources */,
+				22245FBE1E1F9FD500A99929 /* BookWeakDisplayLink.m in Sources */,
 				22245FAC1E1F384A00A99929 /* BookListCollectionViewController.m in Sources */,
 				22245F9F1E1F367D00A99929 /* BookTag.m in Sources */,
 				22245FB71E1F435C00A99929 /* BookListTableViewCell+BookEntity.m in Sources */,
@@ -844,6 +873,7 @@
 				22245F991E1F367D00A99929 /* BookDBHelper.m in Sources */,
 				22245F951E1F367D00A99929 /* BookTagDAO.m in Sources */,
 				22245FA71E1F367D00A99929 /* BookDetailService.m in Sources */,
+				22245FBB1E1F9F7000A99929 /* BookFPSLabel.m in Sources */,
 				22245F971E1F367D00A99929 /* BookBaseNavigationController.m in Sources */,
 				22245F931E1F367D00A99929 /* BookBaseDAO.m in Sources */,
 			);
@@ -996,6 +1026,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = N5G28WF2Y2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/bookCollection-Prefix.pch";
@@ -1003,7 +1034,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magaofei.bookCollection;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "私家书藏DEBUG";
 			};
 			name = Debug;
 		};
@@ -1013,6 +1044,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = N5G28WF2Y2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/bookCollection-Prefix.pch";
@@ -1020,7 +1052,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magaofei.bookCollection;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "私家书藏";
 			};
 			name = Release;
 		};

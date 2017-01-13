@@ -234,7 +234,7 @@
         } else {
             
             NSLog(@"%@, %@", response, responseObject);
-            
+            NSLog(@"thread = %@", [NSThread currentThread]);
             NSString *title = [responseObject objectForKey:@"title"];
             NSArray *authorList = [responseObject objectForKey:@"author"];
             NSString *author = nil;
@@ -252,19 +252,16 @@
             
             UIAlertController *alertController = [UIAlertController
                                                   alertControllerWithTitle:@"提示"
-                                                  message:[NSString
-                                                           stringWithFormat:@"%@\n%@\n%@",
+                                                  message:[NSString stringWithFormat:@"%@\n%@\n%@",
                                                            title, ISBN, author]
                                                   preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *detailAction = [UIAlertAction actionWithTitle:@"查看详情" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                
                 
                 BookDetailViewController *controller = [[BookDetailViewController alloc] init];
                 [controller setBookEntity:bookEntity];
                 
                 [self.navigationController pushViewController:controller animated:YES];
-                
-                                           }];
+                }];
             
             [alertController addAction:detailAction];
             

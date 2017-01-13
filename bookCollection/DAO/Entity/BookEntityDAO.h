@@ -15,7 +15,7 @@
 
 + (BookEntity *)queryModelByDoubanId:(long long)doubanId withDataBase:(FMDatabase *)db;
 
-+ (NSArray<BookEntity *> *)queryAllModelsWithDataBase: (FMDatabase *)db;
++ (NSArray<BookEntity *> *)queryAllModelsWithOffset: (long long)offset size: (NSInteger)size withDataBase: (FMDatabase *)db;
 
 + (BOOL)deleteModelWithId:(long long)id withDataBase:(FMDatabase *)db;
 

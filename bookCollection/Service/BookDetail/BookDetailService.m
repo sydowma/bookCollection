@@ -71,4 +71,22 @@
     return book;
 }
 
++ (BOOL)unFavBookWithId:(long long)id {
+    FMDatabase *db = [FMDatabase databaseWithPath:[BookDBHelper dbPath]];
+    if(![db open]) {
+        return NO;
+    }
+    
+    [BookAuthorDAO deleteModelWithBookId:id withDataBase:db];
+    [BookTranslatorDAO deleteModelWithBookId:id withDataBase:db];
+    [BookTagDAO deleteModelWithBookId:id withDataBase:db];
+    
+    BOOL success = [BookEntityDAO deleteModelWithId:id withDataBase:db];
+    
+    [db close];
+    
+    return success;
+    
+}
+
 @end

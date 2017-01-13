@@ -29,7 +29,7 @@
     }
     
     self.authorLabel.text = [NSString stringWithFormat:@"作者：%@", authorList];
-    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:bookEntity.image]];
+//    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:bookEntity.image]];
     
     // 标签
     // 相对定位的基准View
@@ -81,13 +81,22 @@
         
     }
     
-    // 自动布局Crash隐患: 如果没有Tag数据，就会Crash，没有容错处理
-    // 最后一个button和右侧的textView
-    [self.tagsView addConstraints:[NSLayoutConstraint
-                                   constraintsWithVisualFormat:@"H:[lastDockView]-0-|"
-                                   options:0
-                                   metrics:nil
-                                   views:NSDictionaryOfVariableBindings(lastDockView)]];
+    // 如果没有Tag数据，就会Crash，容错处理
+    if (bookEntity.tags.count > 0) {
+        
+        // 最后一个button和右侧的textView
+        [self.tagsView addConstraints:[NSLayoutConstraint
+                                       constraintsWithVisualFormat:@"H:[lastDockView]-0-|"
+                                       options:0
+                                       metrics:nil
+                                       views:NSDictionaryOfVariableBindings(lastDockView)]];
+    }
+    
+}
+
+
+- (void)startDownloadCoverImageWithBookEntity:(BookEntity *)bookEntity {
+    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:bookEntity.image]];
 }
 
 @end

@@ -18,4 +18,5 @@
 
 - (void)configureWithBookEntity: (BookEntity *)bookEntity;
 
+- (void)startDownloadCoverImageWithBookEntity:(BookEntity *)bookEntity;
 @end

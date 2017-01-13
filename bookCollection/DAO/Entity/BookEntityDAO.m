@@ -38,9 +38,9 @@
 }
 
 // 这里并没有真正的取出所有的Model
-+ (NSArray<BookEntity *> *)queryAllModelsWithDataBase:(FMDatabase *)db {
++ (NSArray<BookEntity *> *)queryAllModelsWithOffset:(long long)offset size:(NSInteger)size withDataBase:(FMDatabase *)db {
     NSMutableArray * results = [@[] mutableCopy];
-    FMResultSet *s = [db executeQuery:@"SELECT * FROM TB_BOOK_ENTITY"];
+    FMResultSet *s = [db executeQuery:@"SELECT * FROM TB_BOOK_ENTITY order by id desc limit ?, ?", @(offset), @(size)];
     while ([s next]) {
         BookEntity *entity = [[BookEntity alloc] initWithFMResultSet:s];
         [results addObject:entity];

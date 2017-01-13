@@ -8,6 +8,7 @@ target 'bookCollection' do
   pod 'MBProgressHUD'
   pod 'SDWebImage'
   pod 'FMDB'
+  pod 'SVPullToRefresh'
 
   # Pods for bookCollection
 
