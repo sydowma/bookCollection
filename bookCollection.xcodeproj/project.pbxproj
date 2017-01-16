@@ -26,7 +26,6 @@
 		22245F9E1E1F367D00A99929 /* BookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F6A1E1F367D00A99929 /* BookEntity.m */; };
 		22245F9F1E1F367D00A99929 /* BookTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F6D1E1F367D00A99929 /* BookTag.m */; };
 		22245FA01E1F367D00A99929 /* BookTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F701E1F367D00A99929 /* BookTranslator.m */; };
-		22245FA11E1F367D00A99929 /* BookAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F741E1F367D00A99929 /* BookAnalyticsViewController.m */; };
 		22245FA21E1F367D00A99929 /* BookDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F771E1F367D00A99929 /* BookDetailViewController.m */; };
 		22245FA31E1F367D00A99929 /* BookListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F7A1E1F367D00A99929 /* BookListViewController.m */; };
 		22245FA41E1F367D00A99929 /* BookListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F7E1E1F367D00A99929 /* BookListTableViewController.m */; };
@@ -40,8 +39,15 @@
 		22245FB71E1F435C00A99929 /* BookListTableViewCell+BookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FB61E1F435C00A99929 /* BookListTableViewCell+BookEntity.m */; };
 		22245FBB1E1F9F7000A99929 /* BookFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FBA1E1F9F7000A99929 /* BookFPSLabel.m */; };
 		22245FBE1E1F9FD500A99929 /* BookWeakDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245FBD1E1F9FD500A99929 /* BookWeakDisplayLink.m */; };
+		2228724C1E2CA3D400C9F636 /* BookAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222872411E2CA3D400C9F636 /* BookAnalyticsViewController.m */; };
+		2228724D1E2CA3D400C9F636 /* PieChartView+Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 222872441E2CA3D400C9F636 /* PieChartView+Author.m */; };
+		2228724E1E2CA3D400C9F636 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222872461E2CA3D400C9F636 /* PieChartView.m */; };
+		2228724F1E2CA3D400C9F636 /* BookAnalyticsTableViewCell+Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 222872491E2CA3D400C9F636 /* BookAnalyticsTableViewCell+Author.m */; };
+		222872501E2CA3D400C9F636 /* BookAnalyticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2228724B1E2CA3D400C9F636 /* BookAnalyticsTableViewCell.m */; };
 		222C98921E1BA09B00A75879 /* bookCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 222C98911E1BA09B00A75879 /* bookCollectionTests.m */; };
 		222C989D1E1BA09B00A75879 /* bookCollectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 222C989C1E1BA09B00A75879 /* bookCollectionUITests.m */; };
+		227041C71E28C50F007E4973 /* BookListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 227041C61E28C50F007E4973 /* BookListCollectionViewCell.m */; };
+		227041CB1E28CC2F007E4973 /* BookListCollectionViewCell+BookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 227041CA1E28CC2F007E4973 /* BookListCollectionViewCell+BookEntity.m */; };
 		47C4EDE995034EBA9E26B0D0 /* libPods-bookCollectionUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F6E708232B8C2EB45F544 /* libPods-bookCollectionUITests.a */; };
 		962EAD42CD944C4AD87F97A9 /* libPods-bookCollection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9C63C0F74BD12A421C1787 /* libPods-bookCollection.a */; };
 		FB8D17BB37D68EFDC52E13F5 /* libPods-bookCollectionTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA7AB5C11676C7BDE007E15 /* libPods-bookCollectionTests.a */; };
@@ -101,8 +107,6 @@
 		22245F6D1E1F367D00A99929 /* BookTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTag.m; sourceTree = "<group>"; };
 		22245F6F1E1F367D00A99929 /* BookTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTranslator.h; sourceTree = "<group>"; };
 		22245F701E1F367D00A99929 /* BookTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTranslator.m; sourceTree = "<group>"; };
-		22245F731E1F367D00A99929 /* BookAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAnalyticsViewController.h; sourceTree = "<group>"; };
-		22245F741E1F367D00A99929 /* BookAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAnalyticsViewController.m; sourceTree = "<group>"; };
 		22245F761E1F367D00A99929 /* BookDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailViewController.h; sourceTree = "<group>"; };
 		22245F771E1F367D00A99929 /* BookDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailViewController.m; sourceTree = "<group>"; };
 		22245F791E1F367D00A99929 /* BookListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookListViewController.h; sourceTree = "<group>"; };
@@ -129,6 +133,16 @@
 		22245FBA1E1F9F7000A99929 /* BookFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookFPSLabel.m; path = FPS/BookFPSLabel.m; sourceTree = "<group>"; };
 		22245FBC1E1F9FD500A99929 /* BookWeakDisplayLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookWeakDisplayLink.h; path = FPS/BookWeakDisplayLink.h; sourceTree = "<group>"; };
 		22245FBD1E1F9FD500A99929 /* BookWeakDisplayLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookWeakDisplayLink.m; path = FPS/BookWeakDisplayLink.m; sourceTree = "<group>"; };
+		222872401E2CA3D400C9F636 /* BookAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAnalyticsViewController.h; sourceTree = "<group>"; };
+		222872411E2CA3D400C9F636 /* BookAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAnalyticsViewController.m; sourceTree = "<group>"; };
+		222872431E2CA3D400C9F636 /* PieChartView+Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PieChartView+Author.h"; sourceTree = "<group>"; };
+		222872441E2CA3D400C9F636 /* PieChartView+Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PieChartView+Author.m"; sourceTree = "<group>"; };
+		222872451E2CA3D400C9F636 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChartView.h; sourceTree = "<group>"; };
+		222872461E2CA3D400C9F636 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChartView.m; sourceTree = "<group>"; };
+		222872481E2CA3D400C9F636 /* BookAnalyticsTableViewCell+Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BookAnalyticsTableViewCell+Author.h"; sourceTree = "<group>"; };
+		222872491E2CA3D400C9F636 /* BookAnalyticsTableViewCell+Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BookAnalyticsTableViewCell+Author.m"; sourceTree = "<group>"; };
+		2228724A1E2CA3D400C9F636 /* BookAnalyticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAnalyticsTableViewCell.h; sourceTree = "<group>"; };
+		2228724B1E2CA3D400C9F636 /* BookAnalyticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAnalyticsTableViewCell.m; sourceTree = "<group>"; };
 		222C98741E1BA09A00A75879 /* 私家书藏DEBUG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "私家书藏DEBUG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C988D1E1BA09B00A75879 /* bookCollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bookCollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C98911E1BA09B00A75879 /* bookCollectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bookCollectionTests.m; sourceTree = "<group>"; };
@@ -137,6 +151,10 @@
 		222C989C1E1BA09B00A75879 /* bookCollectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bookCollectionUITests.m; sourceTree = "<group>"; };
 		222C989E1E1BA09B00A75879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22464D191E24AD9E00935CC0 /* 私家书藏DEBUG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "私家书藏DEBUG.entitlements"; sourceTree = "<group>"; };
+		227041C51E28C50F007E4973 /* BookListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookListCollectionViewCell.h; path = BookCollectionViewCell/BookListCollectionViewCell.h; sourceTree = "<group>"; };
+		227041C61E28C50F007E4973 /* BookListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookListCollectionViewCell.m; path = BookCollectionViewCell/BookListCollectionViewCell.m; sourceTree = "<group>"; };
+		227041C91E28CC2F007E4973 /* BookListCollectionViewCell+BookEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BookListCollectionViewCell+BookEntity.h"; sourceTree = "<group>"; };
+		227041CA1E28CC2F007E4973 /* BookListCollectionViewCell+BookEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BookListCollectionViewCell+BookEntity.m"; sourceTree = "<group>"; };
 		3AC13556DA9A466041C8B934 /* Pods-bookCollectionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookCollectionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bookCollectionUITests/Pods-bookCollectionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E8FF85E78A1407ADD810E3D /* Pods-bookCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookCollection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bookCollection/Pods-bookCollection.debug.xcconfig"; sourceTree = "<group>"; };
 		923DB64D474AAEA4242E8FB2 /* Pods-bookCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookCollectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bookCollectionTests/Pods-bookCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -382,21 +400,12 @@
 		22245F711E1F367D00A99929 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				22245F721E1F367D00A99929 /* BookAnalytics */,
+				2228723F1E2CA3D400C9F636 /* BookAnalytic */,
 				22245F751E1F367D00A99929 /* BookDetail */,
 				22245F781E1F367D00A99929 /* BookList */,
 				22245F7F1E1F367D00A99929 /* BookScanner */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		22245F721E1F367D00A99929 /* BookAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				22245F731E1F367D00A99929 /* BookAnalyticsViewController.h */,
-				22245F741E1F367D00A99929 /* BookAnalyticsViewController.m */,
-			);
-			path = BookAnalytics;
 			sourceTree = "<group>";
 		};
 		22245F751E1F367D00A99929 /* BookDetail */ = {
@@ -422,6 +431,7 @@
 		22245F7B1E1F367D00A99929 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				227041C81E28C515007E4973 /* BookListCollectionViewCell */,
 				22245FAA1E1F384A00A99929 /* BookListCollectionViewController.h */,
 				22245FAB1E1F384A00A99929 /* BookListCollectionViewController.m */,
 			);
@@ -515,6 +525,39 @@
 			name = FPS;
 			sourceTree = "<group>";
 		};
+		2228723F1E2CA3D400C9F636 /* BookAnalytic */ = {
+			isa = PBXGroup;
+			children = (
+				222872401E2CA3D400C9F636 /* BookAnalyticsViewController.h */,
+				222872411E2CA3D400C9F636 /* BookAnalyticsViewController.m */,
+				222872421E2CA3D400C9F636 /* PieChart */,
+				222872471E2CA3D400C9F636 /* TableViewCell */,
+			);
+			path = BookAnalytic;
+			sourceTree = "<group>";
+		};
+		222872421E2CA3D400C9F636 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				222872431E2CA3D400C9F636 /* PieChartView+Author.h */,
+				222872441E2CA3D400C9F636 /* PieChartView+Author.m */,
+				222872451E2CA3D400C9F636 /* PieChartView.h */,
+				222872461E2CA3D400C9F636 /* PieChartView.m */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
+		222872471E2CA3D400C9F636 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				222872481E2CA3D400C9F636 /* BookAnalyticsTableViewCell+Author.h */,
+				222872491E2CA3D400C9F636 /* BookAnalyticsTableViewCell+Author.m */,
+				2228724A1E2CA3D400C9F636 /* BookAnalyticsTableViewCell.h */,
+				2228724B1E2CA3D400C9F636 /* BookAnalyticsTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		222C986B1E1BA09A00A75879 = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +596,17 @@
 				222C989E1E1BA09B00A75879 /* Info.plist */,
 			);
 			path = bookCollectionUITests;
+			sourceTree = "<group>";
+		};
+		227041C81E28C515007E4973 /* BookListCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				227041C51E28C50F007E4973 /* BookListCollectionViewCell.h */,
+				227041C61E28C50F007E4973 /* BookListCollectionViewCell.m */,
+				227041C91E28CC2F007E4973 /* BookListCollectionViewCell+BookEntity.h */,
+				227041CA1E28CC2F007E4973 /* BookListCollectionViewCell+BookEntity.m */,
+			);
+			name = BookListCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -848,11 +902,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				22245F9B1E1F367D00A99929 /* main.m in Sources */,
+				2228724C1E2CA3D400C9F636 /* BookAnalyticsViewController.m in Sources */,
 				22245F9E1E1F367D00A99929 /* BookEntity.m in Sources */,
 				22245F921E1F367D00A99929 /* BookAuthorDAO.m in Sources */,
+				2228724F1E2CA3D400C9F636 /* BookAnalyticsTableViewCell+Author.m in Sources */,
 				22245FA01E1F367D00A99929 /* BookTranslator.m in Sources */,
 				22245FA81E1F367D00A99929 /* BookListService.m in Sources */,
+				227041C71E28C50F007E4973 /* BookListCollectionViewCell.m in Sources */,
 				22245F9C1E1F367D00A99929 /* BookAuthor.m in Sources */,
+				2228724E1E2CA3D400C9F636 /* PieChartView.m in Sources */,
 				22245FA31E1F367D00A99929 /* BookListViewController.m in Sources */,
 				22245FB01E1F3F3F00A99929 /* BookBaseTableViewCell.m in Sources */,
 				22245FA51E1F367D00A99929 /* BookScannerViewController.m in Sources */,
@@ -867,9 +925,11 @@
 				22245FA61E1F367D00A99929 /* BookScanView.m in Sources */,
 				22245F9D1E1F367D00A99929 /* BookBaseModel.m in Sources */,
 				22245F941E1F367D00A99929 /* BookEntityDAO.m in Sources */,
-				22245FA11E1F367D00A99929 /* BookAnalyticsViewController.m in Sources */,
+				222872501E2CA3D400C9F636 /* BookAnalyticsTableViewCell.m in Sources */,
+				227041CB1E28CC2F007E4973 /* BookListCollectionViewCell+BookEntity.m in Sources */,
 				22245F961E1F367D00A99929 /* BookTranslatorDAO.m in Sources */,
 				22245FA21E1F367D00A99929 /* BookDetailViewController.m in Sources */,
+				2228724D1E2CA3D400C9F636 /* PieChartView+Author.m in Sources */,
 				22245F991E1F367D00A99929 /* BookDBHelper.m in Sources */,
 				22245F951E1F367D00A99929 /* BookTagDAO.m in Sources */,
 				22245FA71E1F367D00A99929 /* BookDetailService.m in Sources */,

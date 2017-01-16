@@ -62,6 +62,7 @@
  在重用的时候把之前的清空
  */
 - (void)prepareForReuse {
+    [super prepareForReuse];
     self.titleLabel.text = nil;
     self.coverImageView.image = nil;
     self.authorLabel.text = nil;

@@ -36,7 +36,7 @@
 
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    // 如果是Nav 就更改
+    // 如果是Nav push后就隐藏底部TabBar
     if ([viewController isKindOfClass:[BookBaseViewController class]]) {
         ((BookBaseViewController *)viewController).hidesBottomBarWhenPushed = [(BookBaseViewController *) viewController shouldHideBottomBarWhenPushed];
     } else {

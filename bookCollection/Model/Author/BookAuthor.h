@@ -7,6 +7,7 @@
 //
 
 #import "BookBaseModel.h"
+#import <UIKit/UIKit.h>
 
 @interface BookAuthor : BookBaseModel
 
@@ -21,5 +22,7 @@
  作者名称
  */
 @property (nonatomic, copy) NSString *name;
+
+@property (nonatomic, strong) UIColor *color;
 
 @end

@@ -9,6 +9,7 @@ target 'bookCollection' do
   pod 'SDWebImage'
   pod 'FMDB'
   pod 'SVPullToRefresh'
+  pod 'Masonry'
 
   # Pods for bookCollection
 

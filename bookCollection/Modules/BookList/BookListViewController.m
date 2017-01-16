@@ -17,6 +17,8 @@ typedef NS_ENUM(NSUInteger, BookListMode) {
 
 @interface BookListViewController ()
 
+@property (nonatomic, assign, getter=isFirstLoad) BOOL firstLoad;
+
 @property (nonatomic, assign) BookListMode mode;
 
 @end
@@ -26,11 +28,12 @@ typedef NS_ENUM(NSUInteger, BookListMode) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.firstLoad = YES;
     [self initNavigation];
     
     self.mode = BookListModeTableView;
     [self switchToMode:self.mode];
+    
     
 }
 
@@ -38,6 +41,14 @@ typedef NS_ENUM(NSUInteger, BookListMode) {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 第一次结束后
+    self.firstLoad = NO;
+
+}
+
 
 #pragma mark - Navigation
 
@@ -73,13 +84,24 @@ typedef NS_ENUM(NSUInteger, BookListMode) {
         BookListTableViewController *controller = [[BookListTableViewController alloc] init];
         [self addChildViewController:controller];
         [self.view addSubview:controller.view];
-        controller.view.frame = self.view.bounds;
+        
+        // 这里暂时有个问题 UITableViewWrapperView 会出问题，
+        // 第一次进入时显示正常，切换Mode后会往上偏移，实际上是没有根据Nav自动适应
+        if (!self.isFirstLoad) {
+            controller.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height);
+
+        } else {
+            controller.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+
+        }
+        
         [controller didMoveToParentViewController:self];
+        
     } else {
         BookListCollectionViewController *controller = [[BookListCollectionViewController alloc] init];
         [self addChildViewController:controller];
         [self.view addSubview:controller.view];
-        controller.view.frame = self.view.bounds;
+        controller.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height);
         [controller didMoveToParentViewController:self];
     }
 }

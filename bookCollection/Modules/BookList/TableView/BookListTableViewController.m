@@ -37,16 +37,22 @@ static NSInteger defaultPageSize = 100;
     [super viewDidLoad];
     
     NSLog(@"ViewDidLoad: %f", CFAbsoluteTimeGetCurrent());
-    self.view.backgroundColor = [UIColor redColor];
+    // 直接创建
+    self.bookEntities = [@[] mutableCopy];
+    
     self.firstLoad = YES;
     
     [self initTableView];
     [self getDataWithOffset:0 pageSize:defaultPageSize];
     
-    // 直接创建
-    self.bookEntities = [@[] mutableCopy];
+   
     
-    [self showFPSLabel];
+//    self.edgesForExtendedLayout = UIRectEdgeNone;// 推荐使用
+    
+//    [self showFPSLabel];
+    
+    
+    
 }
 
 
@@ -59,7 +65,6 @@ static NSInteger defaultPageSize = 100;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    // 第一次进入会调用两次（ViewDidLoad、ViewDidAppera）， 需要解决
     
 //     不是第一次加载
     if (self.isFirstLoad == NO) {
@@ -105,11 +110,15 @@ static NSInteger defaultPageSize = 100;
 
 - (void)initTableView {
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) style:UITableViewStylePlain];
+    // 这里为了不使整体上移 所以加了64
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)) style:UITableViewStylePlain];
     tableView.backgroundColor = UIColorFromRGB(0xF9F9F9);
+    
+    
     // 宽度高度自适应
-    tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    tableView.tableFooterView = [UIView new];
+//    tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+//    tableView.tableFooterView = [UIView new];
     tableView.delegate = self;
     tableView.dataSource = self;
     
@@ -223,6 +232,7 @@ static NSInteger defaultPageSize = 100;
     [controller setBookEntity:entity];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
 
 
 

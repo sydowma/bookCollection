@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    // 解决整体上移问题
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +32,8 @@
     [super viewWillAppear:animated];
     [self adjustNavigator];
 }
+
+
 
 /*
 #pragma mark - Navigation
@@ -72,6 +78,8 @@
 - (BOOL)shouldHideBottomBarWhenPushed {
     return NO;
 }
+
+
 
 
 @end
