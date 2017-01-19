@@ -20,9 +20,9 @@
     for (NSArray *item in self.authorArr) {
         endA = startA + item.count/self.sumAuthorCount*2*M_PI;
         UIBezierPath *path = [UIBezierPath bezierPath];
-        [path addArcWithCenter:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2) radius:self.radius startAngle:startA  endAngle:endA clockwise:YES];
+        [path addArcWithCenter:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2+64/2) radius:self.radius startAngle:startA  endAngle:endA clockwise:YES];
         //添加到圆心的直线
-        [path addLineToPoint:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2)];
+        [path addLineToPoint:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2+64/2)];
         float red = (arc4random() % 256);
         float green = (arc4random() % 256);
         float blue = (arc4random() % 256);
@@ -33,16 +33,15 @@
     }
     
     UIBezierPath *path1 = [UIBezierPath bezierPath];
-    [path1 addArcWithCenter:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2) radius:self.radius startAngle:0  endAngle:M_PI*2 clockwise:YES];
+    [path1 addArcWithCenter:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2+64/2) radius:self.radius startAngle:0  endAngle:M_PI*2 clockwise:YES];
     path1.lineWidth = 4;
     [UIColorFromRGBA(0x00A58A, 0.9) setStroke];
     
     
     [path1 stroke];
     
-    // 这里应该把接口抽取出来，在外部设置圆
     UIBezierPath *path2 = [UIBezierPath bezierPath];
-    [path2 addArcWithCenter:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2) radius:self.radius-40 startAngle:0  endAngle:M_PI*2 clockwise:YES];
+    [path2 addArcWithCenter:CGPointMake(self.superview.bounds.size.width/2, self.superview.bounds.size.height/2+64/2) radius:self.radius-40 startAngle:0  endAngle:M_PI*2 clockwise:YES];
     path2.lineWidth = 5;
     [[UIColor whiteColor] setFill];
     [path2 fill];

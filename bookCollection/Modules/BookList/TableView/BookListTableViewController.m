@@ -46,14 +46,14 @@ static NSInteger defaultPageSize = 100;
     [self getDataWithOffset:0 pageSize:defaultPageSize];
     
    
-    
 //    self.edgesForExtendedLayout = UIRectEdgeNone;// 推荐使用
     
 //    [self showFPSLabel];
     
     
-    
 }
+
+
 
 
 
@@ -62,12 +62,12 @@ static NSInteger defaultPageSize = 100;
  选择在每次回到这个控制器的时候都去刷新数据，另一种方案是在扫描到书籍时候发送一个Notification
 
  */
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     
 //     不是第一次加载
-    if (self.isFirstLoad == NO) {
+    if (!self.isFirstLoad) {
 //         无论有多少页，每次都取从第0 到当前收藏的
 //         这里count要加1（扫描的那个）
         [self getDataWithOffset:0 pageSize:self.bookEntities.count+1];
@@ -76,6 +76,10 @@ static NSInteger defaultPageSize = 100;
         self.firstLoad = NO;
 
     }
+    
+    self.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
+
+
     
 //    [self getDataWithOffset:0 pageSize:defaultPageSize];
     
@@ -152,16 +156,20 @@ static NSInteger defaultPageSize = 100;
     }
     
     
-    BookEntity *entity = [self.bookEntities objectAtIndex:indexPath.row];
-    
-    [cell configureWithBookEntity:entity];
-    
-    if (!cell.coverImageView.image) {
-        // 判断图片是否在拖动或滚动中
-        if (tableView.dragging == NO && tableView.decelerating == NO) {
-            [cell startDownloadCoverImageWithBookEntity:entity];
+    if (self.bookEntities.count > 0) {
+        BookEntity *entity = [self.bookEntities objectAtIndex:indexPath.row];
+        
+        [cell configureWithBookEntity:entity];
+        if (!cell.coverImageView.image) {
+            // 判断图片是否在拖动或滚动中
+            if (tableView.dragging == NO && tableView.decelerating == NO) {
+                [cell startDownloadCoverImageWithBookEntity:entity];
+            }
         }
     }
+    
+    
+    
     
     return cell;
 }

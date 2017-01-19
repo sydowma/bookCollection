@@ -19,7 +19,6 @@
 		22245F971E1F367D00A99929 /* BookBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F571E1F367D00A99929 /* BookBaseNavigationController.m */; };
 		22245F981E1F367D00A99929 /* BookBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F5A1E1F367D00A99929 /* BookBaseViewController.m */; };
 		22245F991E1F367D00A99929 /* BookDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F5E1E1F367D00A99929 /* BookDBHelper.m */; };
-		22245F9A1E1F367D00A99929 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22245F5F1E1F367D00A99929 /* Info.plist */; };
 		22245F9B1E1F367D00A99929 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F601E1F367D00A99929 /* main.m */; };
 		22245F9C1E1F367D00A99929 /* BookAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F641E1F367D00A99929 /* BookAuthor.m */; };
 		22245F9D1E1F367D00A99929 /* BookBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22245F671E1F367D00A99929 /* BookBaseModel.m */; };
@@ -735,7 +734,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22245F9A1E1F367D00A99929 /* Info.plist in Resources */,
 				22245F911E1F367D00A99929 /* Main.storyboard in Resources */,
 				22245F8F1E1F367D00A99929 /* Assets.xcassets in Resources */,
 				22245F901E1F367D00A99929 /* LaunchScreen.storyboard in Resources */,

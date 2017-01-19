@@ -113,7 +113,7 @@
     BookAnalyticsViewController *bookAnalyticsController = [[BookAnalyticsViewController alloc] init];
     BookBaseNavigationController *bookAnalyticsNav= [[BookBaseNavigationController alloc] initWithRootViewController:bookAnalyticsController];
     
-    bookAnalyticsController.tabBarItem.title = @"我";
+    bookAnalyticsController.tabBarItem.title = @"作者";
     bookAnalyticsController.tabBarItem.image = [UIImage imageNamed:@"tabbar-icon-me"];
     
     

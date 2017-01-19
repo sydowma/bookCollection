@@ -34,7 +34,8 @@ typedef NS_ENUM(NSUInteger, BookListMode) {
     self.mode = BookListModeTableView;
     [self switchToMode:self.mode];
     
-    
+//    self.navigationController.navigationBar.translucent = NO;
+
 }
 
 - (void)didReceiveMemoryWarning {

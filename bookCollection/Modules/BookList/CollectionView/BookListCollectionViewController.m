@@ -42,6 +42,13 @@ static NSString *identifier = @"bookListCollectionViewCell";
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
+
+}
+
 - (void)initCollectionView {
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -128,7 +135,7 @@ static NSString *identifier = @"bookListCollectionViewCell";
 
 // 每个item水平间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 15;
+    return 20;
 }
 
 // 每个item垂直间距
@@ -145,14 +152,15 @@ static NSString *identifier = @"bookListCollectionViewCell";
 //设置每个item的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat width = (self.view.bounds.size.width - 4 * 15) / 3;
+    CGFloat width = (self.view.bounds.size.width - 2 * 15 - 2 * 20) / 3;
     
     /**
      cell的高度
      20 --> 文字高度
      15 --> 上面间隔
+     64 --> 整体偏移的高度
      */
-    CGFloat height = (self.view.bounds.size.height - 1 * 15 - 3 * 20) / 3;
+    CGFloat height = (self.view.bounds.size.height - 1 * 15 - 2 * 20 - 64) / 3;
     return CGSizeMake(width, height);
 }
 

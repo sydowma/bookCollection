@@ -20,7 +20,10 @@ static CGFloat kNavHeight = 64.0f;  // 导航的高度 以后要改
 @interface BookDetailViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
-
+// 收藏按钮
+@property (nonatomic, strong) UIButton *favButton;
+// 取消收藏按钮
+@property (nonatomic, strong) UIButton *unFavButton;
 @end
 
 @implementation BookDetailViewController
@@ -183,7 +186,7 @@ static CGFloat kNavHeight = 64.0f;  // 导航的高度 以后要改
     [favButton setTitleColor:UIColorFromRGB(0xB8B8B8) forState:UIControlStateDisabled];
     favButton.layer.cornerRadius = 2.0f;
     [favButton addTarget:self action:@selector(didTapFavButton:) forControlEvents:UIControlEventTouchUpInside];
-    
+    self.favButton = favButton;
     [headView addSubview:favButton];
     
     //检查是否已经收藏过了
@@ -197,7 +200,30 @@ static CGFloat kNavHeight = 64.0f;  // 导航的高度 以后要改
     
     [headView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[favButton(==27)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(favButton)]];
     
+    // 取消收藏按钮
+    UIButton *unFavButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.unFavButton = unFavButton;
+    unFavButton.translatesAutoresizingMaskIntoConstraints = NO;
+    unFavButton.titleLabel.font = [UIFont systemFontOfSize:12.0f];
+    [unFavButton setBackgroundColor:[UIColor whiteColor]];
+    [unFavButton setTitle:@"取消收藏" forState:UIControlStateNormal];
+    [unFavButton setTitleColor:UIColorFromRGB(0x00A25B) forState:UIControlStateNormal];
+    unFavButton.layer.cornerRadius = 2.0f;
+    [unFavButton addTarget:self action:@selector(didTapUnfavButton:) forControlEvents:UIControlEventTouchUpInside];
     
+    [headView addSubview:unFavButton];
+    
+    [headView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[favButton]-10-[unFavButton(==70)]" options:NSLayoutFormatAlignAllBottom metrics:nil views:NSDictionaryOfVariableBindings(favButton, unFavButton)]];
+    [headView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[unFavButton(==27)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(unFavButton)]];
+    
+    if (favButton.isEnabled == NO) {
+        unFavButton.hidden = NO;
+    } else {
+        unFavButton.hidden = YES;
+        favButton.enabled = YES;
+        unFavButton = nil;
+    }
+
     
     // 底部
     UIView *bodyView = [[UIView alloc] init];
@@ -255,9 +281,27 @@ static CGFloat kNavHeight = 64.0f;  // 导航的高度 以后要改
     long long bookId = [BookDetailService favBook:self.bookEntity];
     
     if (bookId > 0) {
-        [button setEnabled:NO];
+        [self.favButton setEnabled:NO];
+        self.unFavButton.hidden = NO;
+        NSLog(@"%lld", bookId);
+    } else {
+        NSLog(@"收藏失败 !");
     }
 }
 
+- (void)didTapUnfavButton:(UIButton *)button {
+    
+    BookEntity *bookEntity = [BookDetailService searchFavedBookWithDoubanId:self.bookEntity.doubanId];
+    
+    BOOL success = [BookDetailService unFavBookWithId:bookEntity.id];
+    
+    if (success) {
+        self.unFavButton.hidden = YES;
+        [self.favButton setEnabled:YES];
+    } else {
+        NSLog(@"取消收藏失败! ");
+    }
+    
+}
 
 @end

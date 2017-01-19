@@ -59,12 +59,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self shouldShowShadowImage];
+
     [self initSubviews];
-    
+    self.navigationItem.title = @"我的藏书";
+
     [self getDataWithOffset:0 pageSize:100];
 
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -77,6 +78,7 @@
     if (self.isFirstLoad == NO) {
         //         无论有多少页，每次都取从第0 到当前收藏的
         //         这里count要加1（扫描的那个）
+        // 这个逻辑判断还有问题 
         [self getDataWithOffset:0 pageSize:self.bookEntities.count+1];
     } else {
         // 在第一次加载之后将其改为NO
@@ -113,6 +115,7 @@
     // 清除缓存
     if (offset == 0) {
         [self.bookEntities removeAllObjects];
+        [self.authorArr removeAllObjects];
     }
     
     // 返回的是一个NSArray，我们将其返回一个可变类型的copy，也就是深复制
@@ -121,12 +124,13 @@
         [self.bookEntities addObjectsFromArray:bookEntities];
         
         self.sumAuthorCount = self.bookEntities.count;
+        
         for (BookEntity *entity in self.bookEntites) {
             //        self.sumAuthorCount += entity.authors.count;
             [self.authorArr addObject:entity.authors];
         }
         [self.tableView reloadData];
-        _sumAuthorCountLabel.text = [NSString stringWithFormat:@"%ld", (NSInteger)self.sumAuthorCount];
+        _sumAuthorCountLabel.text = [NSString stringWithFormat:@"%ld", (long)self.sumAuthorCount];
     }];
     
     
@@ -163,7 +167,7 @@
 
     [_sumAuthorCountLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100-40, 40));
-        make.center.mas_equalTo(CGPointMake(_headerView.bounds.size.width/2, _headerView.bounds.size.height/2-20));
+        make.center.mas_equalTo(CGPointMake(_headerView.bounds.size.width/2, _headerView.bounds.size.height/2+64-20));
     }];
     
     _authorLabel = [UILabel new];
@@ -180,14 +184,15 @@
         make.center.mas_equalTo(CGPointMake(_headerView.bounds.size.width/2, _headerView.bounds.size.height/2+20));
     }];
     
-    _tableView = [UITableView new];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
+//    _tableView = [UITableView new];
+    UITableView *tableView = [[UITableView alloc] init];
+    tableView.delegate = self;
+    tableView.dataSource = self;
     //为了让tableView自适应高度设置如下两个属性
-    _tableView.estimatedRowHeight = 70;
-    _tableView.rowHeight = UITableViewAutomaticDimension;
-    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
-    [self.view addSubview:_tableView];
+    tableView.estimatedRowHeight = 50;
+    tableView.rowHeight = UITableViewAutomaticDimension;
+    _tableView = tableView;
+    [self.view addSubview:tableView];
     
     [_tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(0);
@@ -220,9 +225,12 @@
         cell = [[BookAnalyticsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    BookEntity *entity = [self.bookEntities objectAtIndex:indexPath.row];
+    if (self.bookEntities.count > 0) {
+        BookEntity *entity = [self.bookEntities objectAtIndex:indexPath.row];
+        [cell configureWithBookEntity:entity];
+
+    }
     
-    [cell configureWithBookEntity:entity];
     
     return cell;
     
@@ -241,5 +249,7 @@
 //    return 60;
 //    
 //}
+
+
 
 @end
